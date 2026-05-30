@@ -32,5 +32,3 @@ This platform maps this structural displacement using a **10-Year Regime Project
 - **Blueprints Issued to Peers:** 42 / 100
 - **Active System Testing:** Stable Regime
 
----
-*Maintained by an aspiring Developer-Economist as a verified academic portfolio initiative.*
