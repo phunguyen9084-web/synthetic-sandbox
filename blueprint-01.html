@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB-01 // MICRO-QUANT ENGINE SPECIFICATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+        body { font-family: 'JetBrains+Mono', monospace; background-color: #09090b; }
+    </style>
+</head>
+<body class="text-zinc-400 min-h-screen antialiased selection:bg-cyan-500 selection:text-black p-4 md:p-8">
+
+    <header class="max-w-3xl mx-auto border-b border-zinc-800 pb-4 mb-8 flex justify-between items-center">
+        <a href="index.html" class="text-xs text-zinc-500 hover:text-cyan-400 transition">&larr; RETURN_TO_TERMINAL</a>
+        <span class="text-[10px] bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded text-zinc-400">DOC_REF // SB-01</span>
+    </header>
+
+    <main class="max-w-3xl mx-auto space-y-8">
+        <article>
+            <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">SYSTEMS PROTOCOL // FINANCIAL ARBITRAGE</span>
+            <h1 class="text-xl font-bold text-white tracking-tight mb-6">SB-01: The Micro-Quant Information Pipeline</h1>
+            
+            <div class="space-y-6 text-xs text-zinc-400 leading-relaxed">
+                <h3 class="text-xs font-bold text-zinc-200 uppercase tracking-wider">// 01. THE ECONOMIC PARADIGM</h3>
+                <p>
+                    In an economy driven by high-frequency automated systems, raw information access is asymmetric. Relying on retail media or curated search feeds places young decision-makers at a permanent information disadvantage. To build resilient human capital, one must learn to interface directly with unstructured macroeconomic data pipelines at the programmatic layer.
+                </p>
+
+                <h3 class="text-xs font-bold text-zinc-200 uppercase tracking-wider">// 02. THE PRACTICAL OBJECTIVE</h3>
+                <p>
+                    This protocol outlines how to bypass standard informational gatekeepers by writing an automated data pipeline. Below is a foundational python workflow that utilizes web scraping logic to extract real-time corporate equity metrics or economic indices directly from source material, formatting it for quantitative analysis.
+                </p>
+
+                <h3 class="text-xs font-bold text-zinc-200 uppercase tracking-wider">// 03. SYSTEM IMPLEMENTATION SCRIPT</h3>
+                <div class="bg-zinc-950 border border-zinc-800 rounded p-4 text-zinc-300 overflow-x-auto font-mono text-[11px] leading-5">
+<pre><span class="text-zinc-600"># Required dependencies: pip install requests beautifulsoup4</span>
+<span class="text-cyan-400">import</span> requests
+<span class="text-cyan-400">from</span> bs4 <span class="text-cyan-400">import</span> BeautifulSoup
+
+<span class="text-cyan-400">def</span> <span class="text-amber-400">fetch_macro_index</span>(target_url):
+    headers = {<span class="text-emerald-400">"User-Agent"</span>: <span class="text-emerald-400">"Mozilla/5.0 MatrixEngine/1.0"</span>}
+    response = requests.get(target_url, headers=headers)
+    
+    <span class="text-cyan-400">if</span> response.status_code == <span class="text-amber-400">200</span>:
+        soup = BeautifulSoup(response.text, <span class="text-emerald-400">'html.parser'</span>)
+        <span class="text-zinc-600"># Example target parsing node for financial metrics</span>
+        data_point = soup.find(<span class="text-emerald-400">"div"</span>, class_=<span class="text-emerald-400">"data-value-node"</span>)
+        <span class="text-cyan-400">return</span> data_point.text.strip() <span class="text-cyan-400">if</span> data_point <span class="text-cyan-400">else</span> <span class="text-emerald-400">"Data structural anomaly"</span>
+    <span class="text-cyan-400">return</span> <span class="text-emerald-400">"Connection failure"</span>
+
+<span class="text-zinc-600"># System functional call execution placeholder</span>
+print(<span class="text-emerald-400">"[SYSTEM_LOG]: Engine compiled. Execution pipeline ready."</span>)</pre>
+                </div>
+
+                <h3 class="text-xs font-bold text-zinc-200 uppercase tracking-wider">// 04. PEER EXECUTION TASK</h3>
+                <p>
+                    Deploy this code block locally. Modify the target parsing variables to track a localized market index or commodity asset relevant to your immediate digital micro-enterprise. Document your findings and log your validation signature in our community ledger.
+                </p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
